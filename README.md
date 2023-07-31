@@ -37,45 +37,22 @@ Agradecemos ao professor Nélio Alves e ao DevSuperior por fornecerem um curso a
 Vamos juntos transformar o dscommecer em uma plataforma de e-commerce verdadeiramente revolucionária em Java 17 com Spring Boot! Sejam todos bem-vindos! 🚀
 
 ## Layout mobile 
-             
 
+![image](https://github.com/fabriciofreitasad/dscommerce/assets/111000422/c862dda9-4829-4db9-9bb8-0c47093858c4)
 
-       
+![image](https://github.com/fabriciofreitasad/dscommerce/assets/111000422/1c4edba8-5454-48ac-ba93-2975525b3b15)
 
 ## Layout web
 
+![image](https://github.com/fabriciofreitasad/dscommerce/assets/111000422/6cdba0fe-1310-4d26-89a8-e24ceb0d071f)
+![image](https://github.com/fabriciofreitasad/dscommerce/assets/111000422/7fb4daf1-4021-42ca-a660-e4149b2339c6)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     
 
 ## Link do projeto completo:
 [https://www.figma.com/file/ZrGNVNG0kZL6txDv4G8P6s/DSCommerce]
-## Modelo conceitual
- 
 
+## Modelo conceitual
+![image](https://github.com/fabriciofreitasad/dscommerce/assets/111000422/6232efee-9581-401e-b3fa-f3bef91e46c9)
 
 ## clonar repositório
 git clone [https://github.com/fabriciofreitasad/dscommerce]
