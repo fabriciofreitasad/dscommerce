@@ -3,15 +3,12 @@ package com.garra.dscommerce.dto;
 import com.garra.dscommerce.entities.Product;
 
 public class ProductDTO {
-	
+
 	private Long id;
 	private String name;
 	private String description;
 	private Double price;
 	private String imgUrl;
-	
-	public ProductDTO() {
-	}
 
 	public ProductDTO(Long id, String name, String description, Double price, String imgUrl) {
 		this.id = id;
@@ -20,7 +17,7 @@ public class ProductDTO {
 		this.price = price;
 		this.imgUrl = imgUrl;
 	}
-	
+
 	public ProductDTO(Product entity) {
 		id = entity.getId();
 		name = entity.getName();
@@ -48,9 +45,5 @@ public class ProductDTO {
 	public String getImgUrl() {
 		return imgUrl;
 	}
-
-	
-	
-	
 
 }
