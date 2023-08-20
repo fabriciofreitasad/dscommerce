@@ -53,6 +53,7 @@ Vamos juntos transformar o dscommecer em uma plataforma de e-commerce verdadeira
 
 ## Modelo conceitual
 ![image](https://github.com/fabriciofreitasad/dscommerce/assets/111000422/6232efee-9581-401e-b3fa-f3bef91e46c9)
+![image](https://github.com/fabriciofreitasad/dscommerce/assets/111000422/6e32ea57-c38c-4acc-a8c3-2b1977b3e5b3)
 
 ## Como executar o projeto
 Clone este repositório para o seu ambiente de desenvolvimento local.
