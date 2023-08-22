@@ -8,7 +8,7 @@ import jakarta.validation.constraints.Size;
 
 public class ProductDTO {
 
-	private Long id;
+private Long id;
 	
 	@Size(min = 3, max = 80,message = "Nome presisa ter de 3 a 80 caracteres")
 	@NotBlank(message = "Campo requerido")
@@ -57,5 +57,4 @@ public class ProductDTO {
 	public String getImgUrl() {
 		return imgUrl;
 	}
-
 }
