@@ -8,8 +8,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.garra.dscommerce.dto.CategoryDTO;
 import com.garra.dscommerce.dto.ProductDTO;
 import com.garra.dscommerce.dto.ProductMinDTO;
+import com.garra.dscommerce.entities.Category;
 import com.garra.dscommerce.entities.Product;
 import com.garra.dscommerce.repositories.ProductRepository;
 import com.garra.dscommerce.services.exceptions.DatabaseException;
@@ -28,7 +30,6 @@ public class ProductService {
 		Product product = repository.findById(id)
 				.orElseThrow(() -> new ResourceNotFoundException("Recurso não encontrado"));
 		return new ProductDTO(product);
-
 	}
 
 	@Transactional(readOnly = true)
@@ -39,9 +40,7 @@ public class ProductService {
 
 	@Transactional
 	public ProductDTO insert(ProductDTO dto) {
-
 		Product entity = new Product();
-
 		copyDtoToEntity(dto, entity);
 		entity = repository.save(entity);
 		return new ProductDTO(entity);
@@ -66,13 +65,11 @@ public class ProductService {
 			throw new ResourceNotFoundException("Recurso não encontrado");
 		}
 		try {
-	        	repository.deleteById(id);    		
+			repository.deleteById(id);
+		} catch (DataIntegrityViolationException e) {
+			throw new DatabaseException("Falha de integridade referencial");
 		}
-	    	catch (DataIntegrityViolationException e) {
-	        	throw new DatabaseException("Falha de integridade referencial");
-	   	}
 	}
-
 
 	private void copyDtoToEntity(ProductDTO dto, Product entity) {
 		entity.setName(dto.getName());
@@ -80,6 +77,12 @@ public class ProductService {
 		entity.setPrice(dto.getPrice());
 		entity.setImgUrl(dto.getImgUrl());
 
+		entity.getCategories().clear();
+		for (CategoryDTO catDto : dto.getCategories()) {
+			Category cat = new Category();
+			cat.setId(catDto.getId());
+			entity.getCategories().add(cat);
+		}
 	}
 
 }
