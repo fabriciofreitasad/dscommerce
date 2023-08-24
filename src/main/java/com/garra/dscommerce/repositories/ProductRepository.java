@@ -6,4 +6,5 @@ import com.garra.dscommerce.entities.Product;
 
 public interface ProductRepository extends JpaRepository<Product, Long> {
 
+	
 }
