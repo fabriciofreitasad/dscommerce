@@ -8,6 +8,8 @@ import com.garra.dscommerce.entities.Order;
 import com.garra.dscommerce.entities.OrderItem;
 import com.garra.dscommerce.entities.OrderStatus;
 
+import jakarta.validation.constraints.NotEmpty;
+
 public class OrderDTO {
 	private Long id;
 	private Instant moment;
@@ -17,6 +19,7 @@ public class OrderDTO {
 	
 	private PaymentDTO payment;
 	
+	@NotEmpty(message = "Deve ter pelo menos uma categoria")
 	private List<OrderItemDTO> items = new ArrayList<>();
 
 	public OrderDTO(Long id, Instant moment, OrderStatus status, ClientDTO client, PaymentDTO payment) {
