@@ -19,7 +19,7 @@ public class OrderDTO {
 	
 	private PaymentDTO payment;
 	
-	@NotEmpty(message = "Deve ter pelo menos uma categoria")
+	@NotEmpty(message = "Deve ter pelo menos uma item")
 	private List<OrderItemDTO> items = new ArrayList<>();
 
 	public OrderDTO(Long id, Instant moment, OrderStatus status, ClientDTO client, PaymentDTO payment) {
